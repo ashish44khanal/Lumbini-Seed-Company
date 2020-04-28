@@ -102,13 +102,13 @@
                     while($data3=$result3->fetch(PDO::FETCH_ASSOC))
                     {                 
                 ?>   
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card newsCard" style="width: 100%;">
                     <a href="newsDetails.php? news_id=<?php echo $data3['id'];?>" class="newscardImg"><img class="card-img-top" src="news_and_events_images/<?php echo $data3['image'];?> " alt="Card image cap"></a>
                     <div class="card-body">
-                    <a href="chectnewsdetails.php? news_id=<?php echo $data3['id'];?>" class="allnewsTitle"><h5 class="card-title"><?php echo $data3['title'];?></h5></a>
+                    <a href="chectnewsdetails.php? news_id=<?php echo $data3['id'];?>" class="allnewsTitle"><h6 class="card-title" style="font-size:22px;"><?php echo $data3['title'];?></h6></a>
                         <p class="date" style="color:#2d5f2e">18 March, 2020</p>
-                        <p class="card-text"><?php echo $data['description'];?></p>
+                        
                         
                     </div>
                 </div>
