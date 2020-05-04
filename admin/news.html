@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/dashbaordNav.css">
+</head>
+<body>
+    <div class="dashboardNav">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 leftDiv">
+                    <div class="lscContent">
+                        <img src="/images/Logo.png" style="float: left; margin-right: 12px;" alt="logo">
+                        <h5 style="font-weight: bold;"> Lumbini Seed Company</h5>
+                    </div>
+                    <div class="nav navContent">
+                        <ul>
+                            <li><a href="#" class="active"><i class="fa fa-home">   Home</i></a></li>
+                            <li><a href="#"><i class="fa fa-building">    Company's profile</i></a></li>
+                            <li><a href="#"><i class="fa fa-seedling">  Product Portfolio</i></a></li>
+                            <li><a href="#"><i class="fa fa-network-wired">   Distrubution Network</i></a></li>
+                            <li><a href="#"><i class="fa fa-newspaper">  News & Event</i></a></li>
+                            <li><a href="#"><i class="fa fa-accessible-icon">  Career Opportunity</i></a></li>
+                            <li><a href="#"><i class="fa fa-address-book"></i>  Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-10 topDiv">
+                    <div class="topSection">
+                        
+                            <form action="product_search.php" method="POST">
+                                <div class="input-group mb-3" id="searchSection">
+                                    <input type="text" name="search_box" class="form-control col-md-6 offset-md-3" placeholder="What are you looking for?">
+                                    <div class="input-group-prepend">
+                                        <button type="submit" class="input-group-text btn-info" name="search" id="search"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                                    
+                    </div>
+
+     <!-- Tabs  -->
+     <div class="productPorfolioSection" style="margin-top: 50px;">
+         <h2>NEWS & EVENT</h2>
+     </div>
+
+        <div class="myTabs">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#addNews" role="tab" aria-controls="nav-profile" aria-selected="false">Add News</a>
+                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#viewNews" role="tab" aria-controls="nav-contact" aria-selected="false">View News</a>
+
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+
+                
+
+                <!-- add news  -->
+                <div class="tab-pane fade show active" id="addNews" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="container">
+                        <h2 style="margin-top:40px;">Add News</h2>
+                        <div class="categories">
+                            <label for="input">Add Headline</label>
+                            <input type="text" class="form-control col-md-6" placeholder="Enter Product Name">
+                        </div>
+                        <div class="elements">
+                                <label>Add News or Event Image</label><br>
+                                <input type="file">
+                        </div>
+
+                        <div class="elements">
+                                <label for="">News Details</label>
+                                <textarea class="form-control" name="" id="" cols="20" rows="10"></textarea>
+                        </div>
+
+                        <div class="submitButtom" style="margin-top: 20px;"> 
+                            <button class="btn btn-info">ADD</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- view news  -->
+
+                <div class="tab-pane fade" id="viewNews" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="container">
+                        <h2 style="margin-top:40px;">View News & Event</h2>
+
+                        <table class="trHeadProduct">
+                            <tr class="trHead">
+                                <td width="15%">News Img</td>
+                                <td width="45%">News Heading</td>
+                                <td width=20%>Date</td>
+                                <td width=20%>
+                                    EDIT | DELETE
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="viewProductTable">
+                            <tr class="trProducts">
+                                <td width="15%"><img src="../images/news.png" alt="" style="max-width:30%;"></td>
+                                <td width="45%">Name</td>
+                                <td width="20%">3/4/2020</td>
+                                <td width="20%">
+                                    <a href=""><i class="fa fa-edit" style="font-size:larger;"></i></a>
+                                    <span style="border: 1px solid black; margin: 5px 10px;"></span>
+                                    <a href=""><i class="fa fa-trash" style="font-size: larger;"></i></a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    
+                    </div>    
+                </div>
+
+               
+              </div>
+        </div>
+                    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
